@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Bash(npx shadcn@latest init)",
+      "Bash(npx shadcn@latest add button card input badge select tabs)",
+      "Bash(npm run dev:*)",
+      "Bash(taskkill:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(findstr \"127.0.0.1\\|localhost\")",
+      "Bash(wmic process:*)",
+      "Bash(tasklist:*)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(cat:*)",
+      "Bash(node -e:*)",
+      "Bash(powershell -Command \"Stop-Process -Id 38496 -Force\")",
+      "Bash(npm install:*)",
+      "WebFetch(domain:localhost)",
+      "Bash(curl:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(del \"C:\\projetos\\buscamed\\src\\app\\favicon.ico\")",
+      "Bash(git add:*)"
+    ]
+  }
+}

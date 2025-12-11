@@ -1,0 +1,25 @@
+<svg viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B894" />
+      <stop offset="100%" stop-color="#009B7D" />
+    </linearGradient>
+  </defs>
+
+  <!-- Icon: Lupa with health cross -->
+  <g transform="translate(2, 2)">
+    <!-- Lupa circle -->
+    <circle cx="15" cy="15" r="12" fill="url(#logoGradient)" />
+    <circle cx="15" cy="15" r="9" fill="white" fill-opacity="0.15" />
+    <!-- Health cross + -->
+    <rect x="13" y="9" width="4" height="12" rx="1" fill="white" />
+    <rect x="9" y="13" width="12" height="4" rx="1" fill="white" />
+    <!-- Lupa handle -->
+    <rect x="24" y="22" width="10" height="5" rx="2.5" transform="rotate(45 24 22)" fill="url(#logoGradient)" />
+  </g>
+
+  <!-- Text: BuscaMed -->
+  <text x="48" y="28" font-family="Inter, system-ui, sans-serif" font-size="22">
+    <tspan fill="#334155" font-weight="400">Busca</tspan><tspan fill="#00B894" font-weight="700">Med</tspan>
+  </text>
+</svg>

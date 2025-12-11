@@ -1,0 +1,16 @@
+<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B894" />
+      <stop offset="100%" stop-color="#009B7D" />
+    </linearGradient>
+  </defs>
+  <!-- Lupa circle -->
+  <circle cx="13" cy="13" r="11" fill="url(#iconGradient)" />
+  <circle cx="13" cy="13" r="8" fill="white" fill-opacity="0.15" />
+  <!-- Health cross + -->
+  <rect x="11" y="7" width="4" height="12" rx="1" fill="white" />
+  <rect x="7" y="11" width="12" height="4" rx="1" fill="white" />
+  <!-- Lupa handle -->
+  <rect x="21" y="19" width="10" height="5" rx="2.5" transform="rotate(45 21 19)" fill="url(#iconGradient)" />
+</svg>
