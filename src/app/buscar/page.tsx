@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -334,7 +334,7 @@ function FiltersSidebar({
   );
 }
 
-export default function BuscarPage() {
+function BuscarPageContent() {
   const searchParams = useSearchParams();
   const queryParam = searchParams.get("q") || "";
 
@@ -654,5 +654,24 @@ export default function BuscarPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+function BuscarPageLoading() {
+  return (
+    <div className="min-h-screen bg-background w-full flex items-center justify-center">
+      <div className="text-center">
+        <Search className="w-12 h-12 text-muted-foreground/50 mx-auto mb-4 animate-pulse" />
+        <p className="text-muted-foreground">Carregando...</p>
+      </div>
+    </div>
+  );
+}
+
+export default function BuscarPage() {
+  return (
+    <Suspense fallback={<BuscarPageLoading />}>
+      <BuscarPageContent />
+    </Suspense>
   );
 }

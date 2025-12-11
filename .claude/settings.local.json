@@ -21,7 +21,14 @@
       "Bash(curl:*)",
       "Bash(powershell -Command:*)",
       "Bash(del \"C:\\projetos\\buscamed\\src\\app\\favicon.ico\")",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(gh repo create:*)",
+      "Bash(gh repo list:*)",
+      "Bash(gh auth:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(vercel:*)"
     ]
   }
 }
