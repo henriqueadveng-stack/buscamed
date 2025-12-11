@@ -1,3 +1,4 @@
+import { useId } from "react";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
@@ -6,6 +7,10 @@ interface LogoProps {
 }
 
 export function Logo({ variant = "full", className }: LogoProps) {
+  const uniqueId = useId();
+  const gradientMainId = `logoGradientMain-${uniqueId}`;
+  const gradientHandleId = `logoGradientHandle-${uniqueId}`;
+
   return (
     <div className={cn("flex items-center gap-3", className)}>
       {/* Logo Icon - Lupa estilizada com cruz médica */}
@@ -18,11 +23,11 @@ export function Logo({ variant = "full", className }: LogoProps) {
         >
           {/* Gradient definitions */}
           <defs>
-            <linearGradient id="logoGradientMain" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient id={gradientMainId} x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#00B894" />
               <stop offset="100%" stopColor="#009B7D" />
             </linearGradient>
-            <linearGradient id="logoGradientHandle" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient id={gradientHandleId} x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#00A085" />
               <stop offset="100%" stopColor="#008570" />
             </linearGradient>
@@ -33,7 +38,7 @@ export function Logo({ variant = "full", className }: LogoProps) {
             cx="15"
             cy="15"
             r="12"
-            fill="url(#logoGradientMain)"
+            fill={`url(#${gradientMainId})`}
           />
 
           {/* Inner circle - creates ring effect */}
@@ -57,7 +62,7 @@ export function Logo({ variant = "full", className }: LogoProps) {
             height="5"
             rx="2.5"
             transform="rotate(45 24 22)"
-            fill="url(#logoGradientHandle)"
+            fill={`url(#${gradientHandleId})`}
           />
         </svg>
       </div>
